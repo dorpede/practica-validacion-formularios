@@ -2,7 +2,7 @@
 <html class="no-js">
   <head>
     <meta charset="utf-8">
-    <title>Práctica validación formularios</title>
+    <title>mi_aplicacion</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
     <link rel="shortcut icon" href="/favicon.ico">
@@ -16,15 +16,87 @@
     <!-- endbuild -->
   </head>
   <body>
+    <!--[if lt IE 10]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
 
+<!-- Domingo 
     <div class="hero-unit">
-      <h1>Práctica validación formularios</h1>
-      <p>Aquí debería ir el enlace a <a href="https://github.com/juanda99/practica-validacion-formularios">tu respositorio en GitHub</a>, donde estará la versión de desarrollo.</p>
+      <h1>'Allo, 'Allo!</h1>
+      <p>You now have</p>
+      <ul>
+      <li>HTML5 Boilerplate</li>
+
+
+      </ul>
     </div>
+hasta aquí -->
+<!-- Domingo: lo que tengo que añadir al comienzo del body: -->
+<form id="formulario" novalidate action="accion.php" method="post">
+    <h4>
+        Sus datos de contacto <br>
+        <span>
+            Rellene el formulario
+        </span>
+    </h4>
+    <div>
+        <div class="border">
+            <div class="borderInner">
+                <fieldset class="last">
+                    <div class="inline">
+                        <div>
+                            <label for="nombre">Nombre:
+                                <span class="important">*</span>
+                            </label>
+                            <input type="text" id="nombre" name="nombre" class="required" minlength="2" />
+                        </div>
+                        <div>
+                            <label for="apellidos">Nombre:
+                                <span class="important">*</span>
+                            </label>
+                            <input type="text" id="apellidos" name="apellidos" class="required" minlength="2" />
+                        </div>
+                        <div>
+                            <label for="mobile" id="lblmobile">Teléfono móvil
+                                <span class="important">*</span>
+                            </label>
+                            <input type="text" name="mobile" maxlength="15" value="" id="mobile" />
+                        </div>
+                        <div>
+                            <label for="email" id="lblemail">Correo electrónico
+                                <span class="important">*</span>
+                            </label>
+                            <input type="text" name="email" class="required" maxlength="54" value="" id="email" />
+                        </div>
+                        <div>
+                            <label for="emailConf" id="cmp_emailConf">Repetir Correo electrónico
+                                <span class="important">*</span>
+                            </label>
+                            <input type="text" name="emailConf" maxlength="54" value="" id="emailConf" />
+                        </div>
+                        
+                    </div>
+                    <div>
+                        <label for="comentarios">¿Cómo nos has conocido? (Prefiero no contestar, Publicidad, Profesionales del sector, Internet, A través de un amigo o conocido )</label>
+                        <textarea id="comentarios" name="comentarios" class="required"></textarea>
+                    </div>
+                </fieldset>
+            </div>
+            <input type="submit" value="Enviar" />
+        </div>
+    </div>
+</form>
+<!-- Domingo: hasta aquí -->
+
+
+
+
 
 
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/jquery-validate/dist/jquery.validate.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
